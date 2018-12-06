@@ -1,0 +1,87 @@
+<script>
+  function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  }
+  var Url = window.location.href;
+  var pathURL = window.location.pathname;
+  var pathUrlArray = pathURL.split('/').filter(function(item) {
+    return item != "";
+  })
+
+  var activePath = pathUrlArray[(pathUrlArray.length - 1)];
+  var removeDash = activePath.replace(/-/g, " ");
+  var takeOutDotHtml = removeDash.replace(".html", "");
+  var titleName = toTitleCase(takeOutDotHtml);
+
+  var elementJSON = document.createElement('script');
+  elementJSON.type = 'application/ld+json';
+  elementJSON.text = JSON.stringify(
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "WebSite",
+            "@id": "https://www.orami.co.id/",
+            "name": "Home"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "WebPage",
+            "@id": Url,
+            "name": titleName
+          }
+        }
+      ]
+    }
+  );
+
+document.querySelector('body').appendChild(elementJSON);
+</script>
+
+<script>
+  var breadcrumbActive = $(".breadcrumb .active");
+  var productName = breadcrumbActive.text();
+  var productURL = breadcrumbActive.context.URL;
+  var elementJSON = document.createElement('script');
+
+  elementJSON.type = 'application/ld+json';
+  elementJSON.text = JSON.stringify(
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@type": "WebSite",
+                "@id": "https://www.orami.co.id/",
+                "name": "Home"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@type": "WebPage",
+                "@id": productURL,
+                "name": productName
+            }
+          }
+      ]
+    }
+  );     document.querySelector('body').appendChild(elementJSON);
+  </script>
+
+  <script>
+    var positionTwoURL = Url.replace('/'+activePath, "");
+  </script>

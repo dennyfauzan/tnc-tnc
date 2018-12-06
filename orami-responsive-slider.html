@@ -1,0 +1,130 @@
+<style>
+  /* General */
+  .ap-carousel {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-cell {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Arrow Prev & Next */
+  .flickity-prev-next-button {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    padding: 0;
+    text-align: center;
+    background-color: transparent;
+    box-shadow: 0 1px 16px 0 rgba(0,0,0,0.16);
+    border: solid 3px #73777a;
+  }
+
+  .flickity-prev-next-button:hover {
+    background-color: #ff6c6c;
+    border-color: #ff6c6c;
+    color: #fff;
+  }
+
+  .flickity-prev-next-button .arrow {
+    fill: #73777a;
+  }
+  .flickity-prev-next-button:hover .arrow {
+    fill: #fff;
+  }
+
+  /* Dots */
+  .flickity-page-dots .dot {
+    width: 12px!important;
+    height: 12px!important;
+    margin: 0 15px 0 -5px!important;
+    font-size: 30px!important;
+  }
+
+  .flickity-page-dots .dot.is-selected {
+    background-color: #42a9f3;
+  }
+
+  /* Set positioning the dots with option inside or outside image  */
+  .ap-carousel.inside-dots .flickity-page-dots .dot{
+    margin-top: 12px!important;
+    margin-bottom: 12px!important;
+  }
+
+  .ap-carousel.outside-dots .flickity-page-dots{
+    bottom: -50px;
+  }
+
+  @media (max-width: 768px){
+
+    .ap-carousel.outside-dots .flickity-page-dots{
+      bottom: -45px;
+    }
+    .ap-carousel.inside-dots .flickity-page-dots{
+      bottom: -15px;
+    }
+
+    /* General */
+    .flickity-prev-next-button {
+      display: none;
+    }
+
+  }
+</style>
+
+<div class="segment-info mb-24">
+  <div class="oss-g">
+      <div class="ap-carousel outside-dots">
+        <div class="carousel-cell">
+          <a href="/pond-s-white-beauty-micellar-water-100ml.html">
+            <img src="https://cdn.orami.co.id/media/filer_public/8a/98/8a9861a2-6c6f-47a4-8c1c-1038bd2c5a66/sis-orami-promo-banner_2432x670px.jpg" width="100%">
+          </a>
+        </div>
+        <div class="carousel-cell">
+          <a href="/pond-s-white-beauty-tone-up-milk-40g.html">
+            <img src="https://cdn.orami.co.id/media/filer_public/72/8f/728f6eff-df29-4e82-86c6-6d84b59e747c/sis-orami-brand-banner-perfect-pink_2432x670px-sldr-2.jpg" width="100%">
+          </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+<section class="segment-info">
+  <h3>Mudik Tenang Bersama Si Kecil</h3>
+    <!-- ROW 1 -->
+    <div class="oss-g">
+      <div class="col oss-u-1-1 oss-u-md-1-2 half-left mb-16">
+        <a href="#">
+          <img class="img-lg hidden-xs"  src="https://img.orami.co.id/media/wysiwyg/static-page-img/lakme/LAKME-regularbanner.jpg" alt="" width="100%">
+          <img class="img-lg visible-xs"  src="https://cdn.orami.co.id/media/filer_public/44/cc/44cc293a-1586-4ebc-909c-9ac8075a6efb/mb-lg.jpg" alt="" width="100%">
+        </a>
+      </div>
+
+      <div class="col oss-u-1-1 oss-u-md-1-2 half-right mb-16">
+        <div class="ap-carousel inside-dots part-one">
+          <div class="carousel-cell">
+              <a href="#">
+                  <img class="img-lg hidden-xs"  src="https://img.orami.co.id/media/wysiwyg/static-page-img/lakme/LAKME-regularbanner.jpg" alt="" width="100%">
+                  <img class="img-lg visible-xs"  src="https://cdn.orami.co.id/media/filer_public/44/cc/44cc293a-1586-4ebc-909c-9ac8075a6efb/mb-lg.jpg" alt="" width="100%">
+              </a>
+          </div>
+          <div class="carousel-cell">
+              <a href="#">
+                  <img class="img-lg hidden-xs"  src="https://img.orami.co.id/media/wysiwyg/static-page-img/lakme/LAKME-regularbanner.jpg" alt="" width="100%">
+                  <img class="img-lg visible-xs"  src="https://cdn.orami.co.id/media/filer_public/44/cc/44cc293a-1586-4ebc-909c-9ac8075a6efb/mb-lg.jpg" alt="" width="100%">
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<script>
+  $('.ap-carousel').flickity({
+    cellAlign: 'left',
+    contain: true
+  })
+</script>

@@ -1,0 +1,94 @@
+<!-- Original Above Header -->
+<div class="regulatory regulatory-visible">
+  <div class="wrap">
+  <h1>ASI Eksklusif</h1>
+  <p style="color: #ffffff;">Friso mendukung program ASI Ekslusif bagi bayi berusia 0-6 bulan. Air Susu Ibu (ASI) adalah makanan terbaik untuk bayi. Pemberian ASI dapat mempererat ikatan batin antara Ibu dan bayi. Diatas 6 bulan, dampingi ASI dengan makanan pendamping yang sesuai. ASI dianjurkan tetap diberikan hingga usia 2 tahun. Konsultasikan terlebih dahulu pemberian susu formula bagi bayi dengan tenaga medis.</p>
+  <div class="button actions-secondary"><button id="cust-agree-btn" class="action secondary">Saya Setuju dan Mengerti</button></div>
+  </div>
+  </div>
+
+  <!-- Pop up all body -->
+  <div class="regulatory regulatory-visible popup-wrapper">
+    <div class="bg-pop-up"></div>
+    <div id="box">
+    <h1>ASI Eksklusif</h1>
+    <p style="color: #ffffff;">Friso mendukung program ASI Ekslusif bagi bayi berusia 0-6 bulan. Air Susu Ibu (ASI) adalah makanan terbaik untuk bayi. Pemberian ASI dapat mempererat ikatan batin antara Ibu dan bayi. Diatas 6 bulan, dampingi ASI dengan makanan pendamping yang sesuai. ASI dianjurkan tetap diberikan hingga usia 2 tahun. Konsultasikan terlebih dahulu pemberian susu formula bagi bayi dengan tenaga medis.</p>
+    <div class="button actions-secondary"><button id="cust-agree-btn" class="action secondary btn-apply">Saya Setuju dan Mengerti</button></div>
+    </div>
+    </div>
+    <style xml="space"><!--
+     .popup-wrapper{
+      position: relative;
+    }
+    #box{
+      margin: 0 auto;
+      max-width: 650px;
+      padding: 15px;
+      border-radius: 3px;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 15;
+      background:#008ee3;
+      width: 92%;
+    }
+    .bg-pop-up{
+      background-color: rgba(25, 25, 25,.3);
+      position: fixed;
+      left: 0;
+      right:0;
+      bottom:0;
+      top: -60px;
+      width: 100%;
+      z-index: 12;
+    }
+
+
+    .closed{
+      opacity: 0;
+      -webkit-transition: opacity .4s ease-in-out;
+      -moz-transition: opacity .4s ease-in-out;
+      -ms-transition: opacity .4s ease-in-out;
+      -o-transition: opacity .4s ease-in-out;
+      transition: opacity .4s ease-in-out;
+    }
+    #header-info-agreement{
+      height:0; /* temporary style */
+    }
+    .btn-apply{
+      font-weight: bold;
+    }
+    --></style>
+    <script type="text/javascript" xml="space">// <![CDATA[
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    const btnApply = document.querySelector(".btn-apply");
+    const popupWrapper = document.querySelector(".popup-wrapper");
+    btnApply.addEventListener('click', function() {
+     console.log('clicked');
+     popupWrapper.classList.add("closed");
+    });
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    // ]]></script>
